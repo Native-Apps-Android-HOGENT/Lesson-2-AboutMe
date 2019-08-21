@@ -10,7 +10,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/name_txt"
-            android:textSize="@dimen/text_size"
             android:textAlignment="center"
-            android:textColor="#0EB6CC"/>
+            style="@style/name_style"/>
 </LinearLayout>
