@@ -15,10 +15,12 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    private val myName: MyName = MyName("Arthur Dent")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
-
+        binding.myName = myName
 
         binding.nicknameBtn.setOnClickListener {
             addNickname()
@@ -31,11 +33,16 @@ class MainActivity : AppCompatActivity() {
      */
     private fun addNickname(){
 
-        //Change the contents from editText tot TextView
-        nickname_txtview.text = nickname_edit.text
-        nickname_edit.visibility  = View.GONE
-        nickname_btn.visibility = View.GONE
-        nickname_txtview.visibility = View.VISIBLE
+        binding.apply {
+            myName?.nickName = nickname_edit.text.toString()
+            //For some reason my editor complains about invalidateAll although building and
+            // running the app works ...
+            invalidateAll()
+            nicknameEdit.visibility = View.GONE
+            nicknameBtn.visibility = View.GONE
+            nicknameTxtview.visibility = View.VISIBLE
+        }
+
 
 
         //Hide the keyboard
