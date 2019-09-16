@@ -30,7 +30,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/nick_hint"
+                android:autofillHints="auto"
+                android:hint="@string/main_nickname_hint"
                 android:inputType="textPersonName" />
 
         <Button
@@ -40,14 +41,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/roboto"
-                android:text="@string/done" />
+                android:text="@string/main_done" />
 
         <ImageView
                 android:id="@+id/star_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/layout_margin"
-                android:contentDescription="@string/star_image"
+                android:contentDescription="@string/main_star"
                 app:srcCompat="@android:drawable/btn_star_big_on" />
 
         <TextView
@@ -69,10 +70,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:lineSpacingMultiplier="1.2"
-                    android:paddingLeft="@dimen/end_padding"
+                    android:paddingStart="@dimen/end_padding"
                     android:paddingTop="@dimen/small_padding"
                     android:paddingEnd="@dimen/end_padding"
-                    android:text="@string/bio_text" />
+                    android:text="@string/main_bio" />
         </ScrollView>
 
     </LinearLayout>
