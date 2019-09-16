@@ -35,15 +35,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.apply {
             myName?.nickName = nickname_edit.text.toString()
-            //For some reason my editor complains about invalidateAll although building and
-            // running the app works ...
             invalidateAll()
             nicknameEdit.visibility = View.GONE
             nicknameBtn.visibility = View.GONE
             nicknameTxtview.visibility = View.VISIBLE
         }
-
-
 
         //Hide the keyboard
         val imm = getSystemService(
