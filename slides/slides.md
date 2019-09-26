@@ -71,6 +71,13 @@ The compiler automatically derives the following members:
 - `componentN()`{.kotlin} functions corresponding to the properties in their order of declaration
 - `copy()`{.kotlin} function 
 
+# Apply
+
+##
+
+- Use `apply` for code blocks that don't return a value and mainly operate on the members of the receiver object. 
+- The common case for apply is the object configuration. Such calls can be read as “apply the following assignments to the object.”
+
 # Proper naming convention
 
 ## 
@@ -88,4 +95,7 @@ E.g. [the strategy of Jeroen Mols](https://jeroenmols.com/blog/2016/03/07/resour
 
 Description see Jeroen's [blog post](https://jeroenmols.com/blog/2016/03/07/resourcenaming/)
 
+# Expand
 
+##
+Inside the ScrollView, add an ImageView above the TextView. When you run the app, this image, unlike the star, scrolls out of view as the text scrolls up.
