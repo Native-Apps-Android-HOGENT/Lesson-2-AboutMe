@@ -28,6 +28,28 @@ To overcome this, you can use `lateinit`{.kotlin}
 - it is not a nullable type, so `?.`{.kotlin} and `!!`{.kotlin} are not necessary
 - assign the `lateinit var`{.kotlin} a value before you use it. Otherwise, it will crash the app on a `null`{.kotlin} value. 
 
+## Operators in reference to null
+
+- Kotlin's type system is aimed to eliminate NullPointerException's from  code.
+
+## Operator in regards to null
+
+- `!!` asserts that an expression is non-null
+- `?.` performs a safe call (calls a method or accesses a property if the receiver is non-null)
+
+##
+
+```{kotlin}
+val a: String? = null
+print(a!!.length) // >>> NPE: trying to get length of null
+```
+
+##
+```{kotlin}
+val a: String? = null
+print(a?.length) // >>> null is printed in the console
+```
+
 # A data class
 
 ##
