@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
+apply plugin: 'kotlin-kapt'
+
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -13,14 +15,15 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
         dataBinding {
             enabled = true;
         }
         useLibrary 'android.test.runner'
         useLibrary 'android.test.base'
         useLibrary 'android.test.mock'
-
     }
+    
     buildTypes {
         release {
             minifyEnabled false
