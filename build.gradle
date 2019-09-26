@@ -2,14 +2,15 @@
 
 buildscript {
     ext {
-        version_kotlin = "1.3.50"
-        version_core = '1.1.0'
+        version_kotlin = '1.3.50'
         version_appcompat = "1.1.0"
-
+        version_constraint_layout = "1.1.3"
         version_espresso = "3.2.0"
-        version_junit = "1.1.1"
+        version_junit = "4.12"
         version_testrunner = "1.2.0"
         version_testrules = "1.2.0"
+        version_androidx_junit = "1.1.1"
+
     }
 
     repositories {
