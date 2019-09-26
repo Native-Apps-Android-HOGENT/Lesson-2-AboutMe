@@ -40,21 +40,21 @@ class TestNickName {
     fun testAddNickname() {
         performInput()
         //Check whether the data in the nickname field is the nickname entered
-        onView(withId(R.id.nickname_txtview)).check(matches(withText(nickNameToBeEntered)))
+        onView(withId(R.id.lbl_nickname)).check(matches(withText(nickNameToBeEntered)))
     }
 
     @Test
     fun testDisableEditTextAfterInput(){
         performInput()
         //Check whether the edit text is still visible
-        onView(withId(R.id.nickname_edit)).check(matches(withEffectiveVisibility(Visibility.GONE)))
+        onView(withId(R.id.txt_nickname)).check(matches(withEffectiveVisibility(Visibility.GONE)))
     }
 
     private fun performInput(){
         //Enter the nickname in the edit text
-        onView(withId(R.id.nickname_edit)).perform(typeText(nickNameToBeEntered), closeSoftKeyboard())
+        onView(withId(R.id.txt_nickname)).perform(typeText(nickNameToBeEntered), closeSoftKeyboard())
 
         //perform the click on the button
-        onView(withId(R.id.nickname_btn)).perform(click())
+        onView(withId(R.id.btn_nickname)).perform(click())
     }
 }
