@@ -39,13 +39,13 @@ To overcome this, you can use `lateinit`{.kotlin}
 
 ##
 
-```{kotlin}
+```kotlin
 val a: String? = null
 print(a!!.length) // >>> NPE: trying to get length of null
 ```
 
 ##
-```{kotlin}
+```kotlin
 val a: String? = null
 print(a?.length) // >>> null is printed in the console
 ```
