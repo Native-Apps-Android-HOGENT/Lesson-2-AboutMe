@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Jens Buysse, Harm De Weirdt">
+  <title>About me application</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="./reveal.js/css/reset.css">
+  <link rel="stylesheet" href="./reveal.js/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="./reveal.js/css/theme/white.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? './reveal.js/css/print/pdf.css' : './reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="./reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">About me application</h1>
+  <p class="author">Jens Buysse, Harm De Weirdt</p>
+  <p class="date">September, 2019</p>
+</section>
+
+<section><section id="lesson-2" class="title-slide slide level1"><h1>Lesson 2</h1></section><section id="about-me" class="slide level2">
+<h2>About me</h2>
+</section></section>
+<section><section id="lateinit" class="title-slide slide level1"><h1>lateinit</h1></section><section id="section" class="slide level2">
+<h2></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode kotlin"><code class="sourceCode kotlin"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">private</span> lateinit <span class="kw">var</span> <span class="va">binding</span>: ActivityMainBinding</span></code></pre></div>
+</section><section id="section-1" class="slide level2">
+<h2></h2>
+<ul>
+<li>Properties in Kotlin classes can be declared either as mutable using the <code class="sourceCode kotlin"><span class="kw">var</span></code> keyword, or as read-only using the <code class="sourceCode kotlin"><span class="kw">val</span></code> keyword.</li>
+<li>Properties declared as having a non-null type must be initialized in the constructor.</li>
+</ul>
+</section><section id="section-2" class="slide level2">
+<h2></h2>
+<p>To overcome this, you can use <code class="sourceCode kotlin">lateinit</code></p>
+<ul>
+<li>the initial value does not need to be assigned</li>
+<li>it is not a nullable type, so <code class="sourceCode kotlin">?.</code> and <code class="sourceCode kotlin">!!</code> are not necessary</li>
+<li>assign the <code class="sourceCode kotlin">lateinit <span class="kw">var</span></code> a value before you use it. Otherwise, it will crash the app on a <code class="sourceCode kotlin"><span class="kw">null</span></code> value.</li>
+</ul>
+</section><section id="operators-in-reference-to-null" class="slide level2">
+<h2>Operators in reference to null</h2>
+<ul>
+<li>Kotlin’s type system is aimed to eliminate NullPointerException’s from code.</li>
+</ul>
+</section><section id="operator-in-regards-to-null" class="slide level2">
+<h2>Operator in regards to null</h2>
+<ul>
+<li><code>!!</code> asserts that an expression is non-null</li>
+<li><code>?.</code> performs a safe call (calls a method or accesses a property if the receiver is non-null)</li>
+</ul>
+</section><section id="section-3" class="slide level2">
+<h2></h2>
+<pre class="{kotlin}"><code>val a: String? = null
+print(a!!.length) // &gt;&gt;&gt; NPE: trying to get length of null</code></pre>
+</section><section id="section-4" class="slide level2">
+<h2></h2>
+<pre class="{kotlin}"><code>val a: String? = null
+print(a?.length) // &gt;&gt;&gt; null is printed in the console</code></pre>
+</section></section>
+<section><section id="a-data-class" class="title-slide slide level1"><h1>A data class</h1></section><section id="section-5" class="slide level2">
+<h2></h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode kotlin"><code class="sourceCode kotlin"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">data</span> <span class="kw">class</span> MyName (<span class="kw">var</span> <span class="va">myName</span>: <span class="dt">String</span> = <span class="st">&quot;&quot;</span>, <span class="kw">var</span> <span class="va">nickName</span> : <span class="dt">String</span> = <span class="st">&quot;&quot;</span>)</span></code></pre></div>
+</section><section id="section-6" class="slide level2">
+<h2></h2>
+<p>A class whose main purpose is to hold data with standard functionality and utility functions is called a <code class="sourceCode kotlin"><span class="kw">data</span> <span class="kw">class</span></code> and is marked as data.</p>
+</section><section id="section-7" class="slide level2">
+<h2></h2>
+<p>The compiler automatically derives the following members:</p>
+<ul>
+<li><code class="sourceCode kotlin">equals()</code>/<code class="sourceCode kotlin">hashCode()</code> pair</li>
+<li><code class="sourceCode kotlin">toString()</code> of the form <code class="sourceCode kotlin"><span class="st">&quot;MyName(myName=Arthur, nickName=Dent)&quot;</span></code></li>
+<li><code class="sourceCode kotlin">componentN()</code> functions corresponding to the properties in their order of declaration</li>
+<li><code class="sourceCode kotlin">copy()</code> function</li>
+</ul>
+</section></section>
+<section><section id="proper-naming-convention" class="title-slide slide level1"><h1>Proper naming convention</h1></section><section id="section-8" class="slide level2">
+<h2></h2>
+<p>The lack of XML namespaces makes managing Android resources tedious and causes things to grow out of control easily, especially in large projects.</p>
+</section><section id="section-9" class="slide level2">
+<h2></h2>
+<p>You could define your own strategy, or apply a strategy already devices.</p>
+<p>E.g. <a href="https://jeroenmols.com/blog/2016/03/07/resourcenaming/">the strategy of Jeroen Mols</a></p>
+</section><section id="basic-principle" class="slide level2">
+<h2>Basic principle</h2>
+<p><code>what</code> - <code>where</code> - <code>description</code> - <code>size</code></p>
+<p>Description see Jeroen’s <a href="https://jeroenmols.com/blog/2016/03/07/resourcenaming/">blog post</a></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="./reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: './reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
