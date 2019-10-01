@@ -99,3 +99,8 @@ Description see Jeroen's [blog post](https://jeroenmols.com/blog/2016/03/07/reso
 
 ##
 Inside the ScrollView, add an ImageView above the TextView. When you run the app, this image, unlike the star, scrolls out of view as the text scrolls up.
+
+## Create a custom application
+whit the following layout
+
+![](assets/img/mock.jpg)

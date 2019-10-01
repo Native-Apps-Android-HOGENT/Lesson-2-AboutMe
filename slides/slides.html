@@ -81,7 +81,7 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="./reveal.js/css/theme/white.css" id="theme">
+  <link rel="stylesheet" href="./reveal.js/css/theme/black.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -137,12 +137,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 </section><section id="section-3" class="slide level2">
 <h2></h2>
-<pre class="{kotlin}"><code>val a: String? = null
-print(a!!.length) // &gt;&gt;&gt; NPE: trying to get length of null</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode kotlin"><code class="sourceCode kotlin"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">val</span> <span class="va">a</span>: <span class="kw">String</span>? = <span class="kw">null</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>print(a!!.length) <span class="co">// &gt;&gt;&gt; NPE: trying to get length of null</span></span></code></pre></div>
 </section><section id="section-4" class="slide level2">
 <h2></h2>
-<pre class="{kotlin}"><code>val a: String? = null
-print(a?.length) // &gt;&gt;&gt; null is printed in the console</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode kotlin"><code class="sourceCode kotlin"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">val</span> <span class="va">a</span>: <span class="kw">String</span>? = <span class="kw">null</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>print(a?.length) <span class="co">// &gt;&gt;&gt; null is printed in the console</span></span></code></pre></div>
 </section></section>
 <section><section id="a-data-class" class="title-slide slide level1"><h1>A data class</h1></section><section id="section-5" class="slide level2">
 <h2></h2>
@@ -160,10 +160,17 @@ print(a?.length) // &gt;&gt;&gt; null is printed in the console</code></pre>
 <li><code class="sourceCode kotlin">copy()</code> function</li>
 </ul>
 </section></section>
-<section><section id="proper-naming-convention" class="title-slide slide level1"><h1>Proper naming convention</h1></section><section id="section-8" class="slide level2">
+<section><section id="apply" class="title-slide slide level1"><h1>Apply</h1></section><section id="section-8" class="slide level2">
+<h2></h2>
+<ul>
+<li>Use <code>apply</code> for code blocks that don’t return a value and mainly operate on the members of the receiver object.</li>
+<li>The common case for apply is the object configuration. Such calls can be read as “apply the following assignments to the object.”</li>
+</ul>
+</section></section>
+<section><section id="proper-naming-convention" class="title-slide slide level1"><h1>Proper naming convention</h1></section><section id="section-9" class="slide level2">
 <h2></h2>
 <p>The lack of XML namespaces makes managing Android resources tedious and causes things to grow out of control easily, especially in large projects.</p>
-</section><section id="section-9" class="slide level2">
+</section><section id="section-10" class="slide level2">
 <h2></h2>
 <p>You could define your own strategy, or apply a strategy already devices.</p>
 <p>E.g. <a href="https://jeroenmols.com/blog/2016/03/07/resourcenaming/">the strategy of Jeroen Mols</a></p>
@@ -171,6 +178,14 @@ print(a?.length) // &gt;&gt;&gt; null is printed in the console</code></pre>
 <h2>Basic principle</h2>
 <p><code>what</code> - <code>where</code> - <code>description</code> - <code>size</code></p>
 <p>Description see Jeroen’s <a href="https://jeroenmols.com/blog/2016/03/07/resourcenaming/">blog post</a></p>
+</section></section>
+<section><section id="expand" class="title-slide slide level1"><h1>Expand</h1></section><section id="section-11" class="slide level2">
+<h2></h2>
+<p>Inside the ScrollView, add an ImageView above the TextView. When you run the app, this image, unlike the star, scrolls out of view as the text scrolls up.</p>
+</section><section id="create-a-custom-application" class="slide level2">
+<h2>Create a custom application</h2>
+<p>whit the following layout</p>
+<p><img data-src="assets/img/mock.jpg" /></p>
 </section></section>
     </div>
   </div>
