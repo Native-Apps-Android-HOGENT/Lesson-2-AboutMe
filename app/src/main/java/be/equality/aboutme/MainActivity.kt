@@ -10,12 +10,15 @@ import be.equality.aboutme.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    // TODO explain lateinit
     private lateinit var binding: ActivityMainBinding
 
     private val myName: MyName = MyName("Arthur Dent")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // TODO explain databinding
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.myName = myName
 
@@ -29,7 +32,11 @@ class MainActivity : AppCompatActivity() {
      * [nickname_txtView].
      */
     private fun addNickname() {
+
+        //TODO explain apply
         binding.apply {
+
+            //TODO explain ?
             myName?.nickName = txtNickname.text.toString()
             //For some reason my editor complains about invalidateAll although building and
             // running the app works ...
